@@ -1,5 +1,3 @@
-// import java.time.LocalDateTime;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -68,7 +66,7 @@ public class Parser {
   public String parseToJsonArray(String str) {
     if (str.length() != 0) {
       StringBuilder fmtToJsonArray = new StringBuilder(str);
-      return fmtToJsonArray.insert(0, "[").insert(str.length(), "]").deleteCharAt(str.length() + 1)
+      return fmtToJsonArray.insert(0, "[").insert(str.length(), "\n]").deleteCharAt(str.length() + 2)
           .toString();
 
     }
